@@ -7,6 +7,7 @@ import ProcessRoadmap from '@/components/sections/layouts/roadmap/ProcessRoadmap
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import RevealFooter from '@/components/sections/layouts/footer/RevealFooter';
+import { Globe } from '@/components/bento/contents/Globe';
 
 const theme: SiteTheme = {
   styleVariant: 'brainRot',
@@ -55,9 +56,9 @@ export default function Home() {
       <div id="roadmap" data-section="roadmap" className="scroll-mt-24">
         <ProcessRoadmap
           items={[
-            { id: '1', title: 'Phase 1', description: 'Concept and Planning', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139821618-e6859c2a.jpg', items: [{ icon: Globe, text: 'Global Community Building' }]},
-            { id: '2', title: 'Phase 2', description: 'Development', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139823162-66ee65e4.jpg', items: [{ icon: Globe, text: 'Token Release' }]},
-            { id: '3', title: 'Phase 3', description: 'Marketing', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139825884-0f8e08ca.jpg', items: [{ icon: Globe, text: 'Community Engagement' }]}
+            { id: '1', title: 'Phase 1', description: 'Concept and Planning', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139821618-e6859c2a.jpg', items: [{ icon: Globe, text: 'Global Community Building' }], reverse: false},
+            { id: '2', title: 'Phase 2', description: 'Development', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139823162-66ee65e4.jpg', items: [{ icon: Globe, text: 'Token Release' }], reverse: true},
+            { id: '3', title: 'Phase 3', description: 'Marketing', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139825884-0f8e08ca.jpg', items: [{ icon: Globe, text: 'Community Engagement' }], reverse: false}
           ]}
           className="my-8"
         />
