@@ -17,7 +17,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "BrainRot Memecoin — chaotic memes, clear steps to buy",
   description: "BrainRot Memecoin blends meme energy with a simple buy path, transparent tokenomics, and a bold brain-bending vibe.",
-  keywords: ["memecoin", "brainrot", "cryptocurrency", "meme token", "buy memecoin", "tokenomics", "roadmap", "crypto landing", "cryptocurrency"],
+  keywords: ["memecoin","brainrot","cryptocurrency","meme token","buy memecoin","tokenomics","roadmap","crypto landing","cryptocurrency"],
   alternates: {
     canonical: "/",
   },
@@ -27,18 +27,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "BrainRot Coin",
-    images: [{
-      url: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1759139827368-34ae9cac.jpg",
-      width: 1200,
-      height: 630,
-      alt: "BrainRot Memecoin",
-    }],
+    images: [{ url: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/draw-a-cartoon-space-landscape-in-16-9-a-1759140960252-cb332a42.jpg", width: 1200, height: 630, alt: "BrainRot Memecoin vibrant illustration" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "BrainRot Memecoin — chaotic memes, clear steps to buy",
     description: "BrainRot Memecoin blends meme energy with a simple buy path, transparent tokenomics, and a bold brain-bending vibe.",
-    images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1759139827368-34ae9cac.jpg"],
+    images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/draw-a-cartoon-space-landscape-in-16-9-a-1759140960252-cb332a42.jpg"],
   },
   robots: {
     index: true,
@@ -51,9 +46,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased`}>{children}</body>
     </html>
   );
 }

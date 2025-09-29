@@ -7,7 +7,6 @@ import ProcessRoadmap from '@/components/sections/layouts/roadmap/ProcessRoadmap
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
 import RevealFooter from '@/components/sections/layouts/footer/RevealFooter';
-import { Globe } from '@/components/bento/contents/Globe';
 
 const theme: SiteTheme = {
   styleVariant: 'brainRot',
@@ -20,74 +19,81 @@ export default function Home() {
     <SiteThemeProvider theme={theme}>
       <div id="nav" data-section="nav">
         <NavbarLayoutSplitBottom
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1759139827368-34ae9cac.jpg"
-          logoWidth={150}
-          logoHeight={50}
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logo-for-b-1759140967443-d013c043.jpg"
+          logoAlt="BrainRot Coin"
           navItems={[
-            { name: 'Hero', id: 'hero' },
-            { name: 'About', id: 'about' },
-            { name: 'Roadmap', id: 'roadmap' },
-            { name: 'How to Buy', id: 'how-to-buy' },
-            { name: 'Tokenomics', id: 'tokenomics' },
-            { name: 'Footer', id: 'footer' },
+            { name: "Hero", id: "hero" },
+            { name: "About", id: "about" },
+            { name: "Roadmap", id: "roadmap" },
+            { name: "How to Buy", id: "how-to-buy" },
+            { name: "Tokenomics", id: "tokenomics" },
+            { name: "Footer", id: "footer" }
           ]}
           buttonText="Buy BrainRot"
         />
       </div>
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <TokenBillboardHero
-          title="BrainRot Memecoin"
-          subtitle="Join the revolution of memecoins!"
-          contractAddress="0x...."
+          title="Welcome to BrainRot Memecoin"
+          subtitle="A memecoin that embraces the chaos of crypto"
+          contractAddress="0x1234567890abcdef"
           copyButtonText="Copy Address"
-          copiedText="Address Copied"
+          copiedText="Address Copied!"
         />
       </div>
-      <div id="about" data-section="about" className="scroll-mt-24">
+      <div id="about" data-section="about">
         <CtaAbout
           title="About BrainRot"
           descriptions={[
-            "Welcome to BrainRot, the fun and chaotic memecoin!",
-            "Our mission is to bring laughter while having transparent tokenomics.",
-            "Join us in making memecoins fun again!"
+            "BrainRot is a chaotic memecoin for the daring.",
+            "Engage in the whirlwind of memes and crypto.",
+            "Join our community and be part of the future."
           ]}
         />
       </div>
-      <div id="roadmap" data-section="roadmap" className="scroll-mt-24">
+      <div id="roadmap" data-section="roadmap">
         <ProcessRoadmap
           items={[
-            { id: '1', title: 'Phase 1', description: 'Concept and Planning', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139821618-e6859c2a.jpg', items: [{ icon: Globe, text: 'Global Community Building' }], reverse: false},
-            { id: '2', title: 'Phase 2', description: 'Development', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139823162-66ee65e4.jpg', items: [{ icon: Globe, text: 'Token Release' }], reverse: true},
-            { id: '3', title: 'Phase 3', description: 'Marketing', image: 'https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/create-a-2d-digital-illustration-in-brai-1759139825884-0f8e08ca.jpg', items: [{ icon: Globe, text: 'Community Engagement' }], reverse: false}
+            { id: '1', title: 'Phase 1', description: 'Launch the memecoin' },
+            { id: '2', title: 'Phase 2', description: 'Community building' },
+            { id: '3', title: 'Phase 3', description: 'Exchange listings' }
           ]}
-          className="my-8"
         />
       </div>
-      <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
-        <HowToBuy2D variant="simple" />
+      <div id="how-to-buy" data-section="how-to-buy">
+        <HowToBuy2D variant="reveal" />
       </div>
-      <div id="tokenomics" data-section="tokenomics" className="scroll-mt-24">
+      <div id="tokenomics" data-section="tokenomics">
         <BigNumberTokenomics
           title="Tokenomics"
-          description="Transparent and clear tokenomics for investors."
+          description="Discover the numbers behind BrainRot."
           kpiItems={[
-            { value: '1M', description: 'Total Supply', longDescription: 'Total amount of memecoins created.', icon: 'DollarSign' },
-            { value: '500K', description: 'Market Cap', longDescription: 'Total market capitalization of memecoins.', icon: 'DollarSign' },
-            { value: '5K', description: 'Holders', longDescription: 'Number of unique holders of the memecoin.', icon: 'Users' }
+            { value: '1M', description: 'Total Supply', longDescription: 'Total tokens minted since launch.', icon: 'LucideIcon' },
+            { value: '500k', description: 'Circulating Supply', longDescription: 'Tokens currently in circulation.', icon: 'LucideIcon' },
+            { value: '100k', description: 'Liquidity', longDescription: 'Total liquidity provided to exchanges.', icon: 'LucideIcon' }
           ]}
         />
       </div>
-      <div id="footer" data-section="footer" className="scroll-mt-24">
+      <div id="footer" data-section="footer">
         <RevealFooter
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1759139827368-34ae9cac.jpg"
-          logoWidth={150}
-          logoHeight={50}
+          logoText="BrainRot Coin"
           columns={[
-            { title: 'Help', items: [{ label: 'FAQ', onClick: () => {} }, { label: 'Support', onClick: () => {} }] },
-            { title: 'Company', items: [{ label: 'About', onClick: () => {} }, { label: 'Contact', onClick: () => {} }] },
-            { title: 'Legal', items: [{ label: 'Privacy Policy', onClick: () => {} }, { label: 'Terms of Service', onClick: () => {} }] },
+            { title: 'Links', items: [
+              { label: 'Home', onClick: () => {} },
+              { label: 'About', onClick: () => {} },
+              { label: 'Contact', onClick: () => {} }
+            ] },
+            { title: 'Community', items: [
+              { label: 'Discord', onClick: () => {} },
+              { label: 'Twitter', onClick: () => {} },
+              { label: 'Telegram', onClick: () => {} }
+            ] },
+            { title: 'Legal', items: [
+              { label: 'Privacy Policy', onClick: () => {} },
+              { label: 'Terms of Service', onClick: () => {} }
+            ] }
           ]}
-          copyrightText="© 2023 BrainRot Coin. All rights reserved."
+          copyrightText="© 2024 BrainRot Coin. All rights reserved."
           onPrivacyClick={() => {}}
         />
       </div>
